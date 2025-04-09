@@ -1,4 +1,4 @@
-import React from 'react';
+/* import React from 'react'; */
 import { MainWrapper } from './styles/MainContainer.style';
 
 const images = {
