@@ -104,16 +104,19 @@ Error generating stack: `+e.message+`
     font-family: "Inter", monospace;
     opacity: 0.8;
   }
-  .renewable{
+
+  .renewable {
     position: absolute;
     margin: 0;
     font-size: 1.2rem;
-    top: -40px;
+    top: 30px;
+    font-weight: 700;
     left: 50px;
-    color: #D33918;
+    color: #d33918;
     font-family: "Inter", monospace;
     opacity: 0.9;
-    }
+  }
+
   .shoe-wrapper {
     position: relative;
     height: 100%;
@@ -145,50 +148,47 @@ Error generating stack: `+e.message+`
     filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.57));
   }
 
-@keyframes shoeSlideUp {
-  0% {
-    transform: translate(-50%, 5%);
-    opacity: 0;
+  @keyframes shoeSlideUp {
+    0% {
+      transform: translate(-50%, 5%);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(-50%, 0);
+      opacity: 1;
+    }
   }
-  100% {
-    transform: translate(-50%, 0);
+
+  @keyframes transitionSlideGlitch {
+    0% {
+      transform: translate(-50%, 10%);
+      opacity: 0;
+      filter: brightness(1.4) contrast(1.2);
+    }
+    40% {
+      filter: brightness(1.1);
+    }
+    100% {
+      transform: translate(-50%, 0);
+      opacity: 1;
+      filter: none;
+    }
+  }
+
+  .transition-glitch.animate-in {
+    animation: transitionSlideGlitch 0.6s ease-out forwards;
+  }
+
+  .transition-glitch {
+    z-index: 5;
     opacity: 1;
+    pointer-events: none;
+    position: absolute;
+    bottom: -2%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 51.2vh;
   }
-}
-
-
-@keyframes transitionSlideGlitch {
-  0% {
-    transform: translate(-50%, 10%);
-    opacity: 0;
-    filter: brightness(1.4) contrast(1.2);
-  }
-  40% {
-    filter: brightness(1.1);
-  }
-  100% {
-    transform: translate(-50%, 0);
-    opacity: 1;
-    filter: none;
-  }
-}
-
-.transition-glitch.animate-in {
-  animation: transitionSlideGlitch 0.6s ease-out forwards;
-}
-
-
-.transition-glitch {
-  z-index: 5;
-  opacity: 1;
-  pointer-events: none;
-  position: absolute;
-  bottom: -2%;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 51.2vh;
-}
-
 
   .glitch {
     z-index: 2;
@@ -268,7 +268,7 @@ Error generating stack: `+e.message+`
     }
   }
 
-  h2 {
+  .prototype {
     position: absolute;
     font-size: 7rem;
     bottom: 0%;
@@ -293,4 +293,31 @@ Error generating stack: `+e.message+`
       opacity: 1;
     }
   }
-`;function Zv(i,r){const o=vl.useRef(!1);vl.useEffect(()=>{const s=g=>{g.deltaY>0&&!o.current&&(i(),o.current=!0,setTimeout(()=>{o.current=!1},r))};return addEventListener("wheel",s),()=>{removeEventListener("wheel",s)}},[i,r])}const di=[{base:new URL("/lx1/assets/v2-BBSgnOCz.png",import.meta.url).href,glitch:new URL("/lx1/assets/v2.glitch-BJ3ZSR-R.png",import.meta.url).href,transition:new URL("/lx1/assets/v2.transition-Br-Xwh4F.png",import.meta.url).href},{base:new URL("/lx1/assets/v3-DcTMqgdl.png",import.meta.url).href,glitch:new URL("/lx1/assets/v3.glitch-CIlnG5ac.png",import.meta.url).href,transition:new URL("/lx1/assets/v3.transition-CfNQMMk0.png",import.meta.url).href},{base:new URL("/lx1/assets/v4-DFpuSh4D.png",import.meta.url).href,glitch:new URL("/lx1/assets/v4.glitch-Dpkri9FL.png",import.meta.url).href,transition:new URL("/lx1/assets/v4.transition-Cu8PPTX8.png",import.meta.url).href}],Pf={linkedIn:new URL("/lx1/assets/in-DiD_mLFV.png",import.meta.url).href,github:new URL("/lx1/assets/git-5yWhfxZM.png",import.meta.url).href,ig:new URL("/lx1/assets/ig-CclRiKqz.png",import.meta.url).href};function Lv(){const[i,r]=vl.useState(""),[o,s]=vl.useState(0),[g,A]=vl.useState(0),[U,Y]=vl.useState(!0),[M,E]=vl.useState(!1);return vl.useEffect(()=>{r(""),requestAnimationFrame(()=>{r("animate-in")})},[o]),vl.useEffect(()=>{Y(!1);const R=setTimeout(()=>{Y(!0)},50);return()=>clearTimeout(R)},[o]),Zv(()=>{if(M)return;const R=(o+1)%di.length;A(R),E(!0),setTimeout(()=>{s(R),E(!1)},250)},100),ot.jsxs(Qv,{children:[ot.jsx("a",{href:"mailto:alex.tarverdi@outlook.com",children:ot.jsx("span",{className:"contact",children:"@reach out"})}),ot.jsxs("div",{className:"border",children:[ot.jsx("h2",{className:"renewable",children:"Renewable materials"}),ot.jsx("h1",{className:"shoeName",children:"Nike Lx1 Prototype"}),ot.jsxs("div",{className:"arrows",children:[ot.jsx("div",{className:"straightLine"}),ot.jsx("span",{className:"arrow arrow-1",children:"˅"}),ot.jsx("span",{className:"arrow arrow-2",children:"˅"}),ot.jsx("span",{className:"discover",children:"discover yours"})]}),ot.jsxs("div",{className:"socials",children:[ot.jsx("a",{href:"https://www.linkedin.com/in/alex-tarverdi",target:"_blank",rel:"noopener noreferrer",children:ot.jsx("img",{src:Pf.linkedIn,alt:"LinkedIn",className:"social-icon"})}),ot.jsx("a",{href:"https://github.com/pistolpet3y",target:"_blank",rel:"noopener noreferrer",children:ot.jsx("img",{src:Pf.github,alt:"GitHub",className:"social-icon"})}),ot.jsx("a",{href:"https://www.instagram.com/pistolpet3y/",target:"_blank",rel:"noopener noreferrer",children:ot.jsx("img",{src:Pf.ig,alt:"Instagram",className:"social-icon"})})]}),ot.jsx("div",{className:"shoe-wrapper",children:M?ot.jsx("img",{src:di[g].transition,alt:"transition",className:`shoe transition-glitch ${i}`}):ot.jsxs(ot.Fragment,{children:[ot.jsx("img",{src:di[o].base,alt:"shoe",className:`shoe ${U?"show":""}`}),ot.jsx("img",{src:di[o].glitch,alt:"glitch",className:`glitch ${U?"show":""}`})]})}),ot.jsx("h2",{children:"prototype"})]})]})}function Vv(){return ot.jsxs(ot.Fragment,{children:[ot.jsx(Xv,{}),ot.jsx(Lv,{})]})}C1.createRoot(document.getElementById("root")).render(ot.jsx(vl.StrictMode,{children:ot.jsx(Vv,{})}));
+
+  @media only screen and (max-width: 768px) {
+    .shoeName {
+      font-size: 1.8rem;
+      opacity: 1;
+      color: #d33918;
+    }
+    .renewable {
+      font-size: 1rem;
+    }
+    .socials img {
+      visibility: hidden;
+    }
+    .prototype {
+      bottom: -0.7%;
+      font-size: 4rem;
+    }
+    .arrows {
+      top: 55%;
+    }
+    .shoe,
+    .glitch {
+      height: 26vh;
+      bottom: 8%;
+      left: 52%;
+    }
+  }
+`;function Zv(i,r){const o=vl.useRef(!1);vl.useEffect(()=>{const s=g=>{g.deltaY>0&&!o.current&&(i(),o.current=!0,setTimeout(()=>{o.current=!1},r))};return addEventListener("wheel",s),()=>{removeEventListener("wheel",s)}},[i,r])}const di=[{base:new URL("/lx1/assets/v2-GSqlK3Hh.png",import.meta.url).href,glitch:new URL("/lx1/assets/v2.glitch-BJ3ZSR-R.png",import.meta.url).href,transition:new URL("/lx1/assets/v2.transition-C9GQsnSy.png",import.meta.url).href},{base:new URL("/lx1/assets/v3-DcTMqgdl.png",import.meta.url).href,glitch:new URL("/lx1/assets/v3.glitch-CIlnG5ac.png",import.meta.url).href,transition:new URL("/lx1/assets/v3.transition-CfNQMMk0.png",import.meta.url).href},{base:new URL("/lx1/assets/v4-DFpuSh4D.png",import.meta.url).href,glitch:new URL("/lx1/assets/v4.glitch-Dpkri9FL.png",import.meta.url).href,transition:new URL("/lx1/assets/v4.transition-Cu8PPTX8.png",import.meta.url).href}],Pf={linkedIn:new URL("/lx1/assets/in-DiD_mLFV.png",import.meta.url).href,github:new URL("/lx1/assets/git-5yWhfxZM.png",import.meta.url).href,ig:new URL("/lx1/assets/ig-CclRiKqz.png",import.meta.url).href};function Lv(){const[i,r]=vl.useState(""),[o,s]=vl.useState(0),[g,A]=vl.useState(0),[U,Y]=vl.useState(!0),[M,E]=vl.useState(!1);return vl.useEffect(()=>{r(""),requestAnimationFrame(()=>{r("animate-in")})},[o]),vl.useEffect(()=>{Y(!1);const R=setTimeout(()=>{Y(!0)},50);return()=>clearTimeout(R)},[o]),Zv(()=>{if(M)return;const R=(o+1)%di.length;A(R),E(!0),setTimeout(()=>{s(R),E(!1)},250)},100),ot.jsxs(Qv,{children:[ot.jsx("a",{href:"mailto:alex.tarverdi@outlook.com",children:ot.jsx("span",{className:"contact",children:"@reach out"})}),ot.jsxs("div",{className:"border",children:[ot.jsx("div",{className:"renewable",children:"Renewable materials"}),ot.jsx("h1",{className:"shoeName",children:"Nike Lx1 Prototype"}),ot.jsxs("div",{className:"arrows",children:[ot.jsx("div",{className:"straightLine"}),ot.jsx("span",{className:"arrow arrow-1",children:"˅"}),ot.jsx("span",{className:"arrow arrow-2",children:"˅"}),ot.jsx("span",{className:"discover",children:"discover yours"})]}),ot.jsxs("div",{className:"socials",children:[ot.jsx("a",{href:"https://www.linkedin.com/in/alex-tarverdi",target:"_blank",rel:"noopener noreferrer",children:ot.jsx("img",{src:Pf.linkedIn,alt:"LinkedIn",className:"social-icon"})}),ot.jsx("a",{href:"https://github.com/pistolpet3y",target:"_blank",rel:"noopener noreferrer",children:ot.jsx("img",{src:Pf.github,alt:"GitHub",className:"social-icon"})}),ot.jsx("a",{href:"https://www.instagram.com/pistolpet3y/",target:"_blank",rel:"noopener noreferrer",children:ot.jsx("img",{src:Pf.ig,alt:"Instagram",className:"social-icon"})})]}),ot.jsx("div",{className:"shoe-wrapper",children:M?ot.jsx("img",{src:di[g].transition,alt:"transition",className:`shoe transition-glitch ${i}`}):ot.jsxs(ot.Fragment,{children:[ot.jsx("img",{src:di[o].base,alt:"shoe",className:`shoe ${U?"show":""}`}),ot.jsx("img",{src:di[o].glitch,alt:"glitch",className:`glitch ${U?"show":""}`})]})}),ot.jsx("div",{className:"prototype",children:"prototype"})]})]})}function Vv(){return ot.jsxs(ot.Fragment,{children:[ot.jsx(Xv,{}),ot.jsx(Lv,{})]})}C1.createRoot(document.getElementById("root")).render(ot.jsx(vl.StrictMode,{children:ot.jsx(Vv,{})}));
