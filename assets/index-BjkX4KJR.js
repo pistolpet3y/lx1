@@ -69,7 +69,7 @@ Error generating stack: `+e.message+`
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 100vh;
+  height: 100svh;
   position: relative;
 
   .contact {
