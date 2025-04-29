@@ -1,14 +1,15 @@
 @"
-# Ignorera node_modules i både backend och frontend
 /backend/node_modules
 /frontend/node_modules
 
-# Ignorera loggfiler
 *.log
 
-# Ignorera miljövariabler
 .env
 
-# Ignorera byggmappar (t.ex. från React)
 frontend/dist
 "@ | Out-File -Encoding utf8 -Append .gitignore
+
+/backend/sqlite3.exe
+/backend/sqlite3_analyzer.exe
+/backend/sqlite3_rsync.exe
+/backend/sqldiff.exe
